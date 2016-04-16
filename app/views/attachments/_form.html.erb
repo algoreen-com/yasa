@@ -1,4 +1,4 @@
-<%= form_for(@attachment) do |f| %>
+<%= semantic_form_for @attachment do |f| %>
   <% if @attachment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@attachment.errors.count, "error") %> prohibited this attachment from being saved:</h2>
@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<%= f.inputs %>
+	<%= f.actions %>
+
 <% end %>

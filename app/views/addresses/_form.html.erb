@@ -1,4 +1,4 @@
-<%= form_for(@address) do |f| %>
+<%= semantic_form_for @address do |f| %>
   <% if @address.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@address.errors.count, "error") %> prohibited this address from being saved:</h2>
@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= f.inputs %>
+<%= f.actions %>
+
 <% end %>

@@ -1,4 +1,4 @@
-<%= form_for(@stock_level_adjustment) do |f| %>
+<%= semantic_form_for @stock_level_adjustment)do |f| %>
   <% if @stock_level_adjustment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@stock_level_adjustment.errors.count, "error") %> prohibited this stock_level_adjustment from being saved:</h2>
@@ -11,7 +11,6 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%= f.inputs %>
+    <%= f.actions %>
 <% end %>

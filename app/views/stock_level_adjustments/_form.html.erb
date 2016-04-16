@@ -1,0 +1,17 @@
+<%= form_for(@stock_level_adjustment) do |f| %>
+  <% if @stock_level_adjustment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stock_level_adjustment.errors.count, "error") %> prohibited this stock_level_adjustment from being saved:</h2>
+
+      <ul>
+      <% @stock_level_adjustment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,7 +1,7 @@
 # YASA
 
-[![Build Status]
-YASA stands for Yet Another Shopping App. We 
+[![Build Status]]
+YASA stands for Yet Another Shopping App. 
 
 ## Documentation & Support
 

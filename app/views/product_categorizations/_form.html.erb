@@ -1,0 +1,16 @@
+<%= semantic_form_for @product_categorization do |f| %>
+  <% if @product_categorization.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product_categorization.errors.count, "error") %> prohibited this product_categorization from being saved:</h2>
+
+      <ul>
+      <% @product_categorization.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.inputs %>
+    <%= f.actions %>
+<% end %>

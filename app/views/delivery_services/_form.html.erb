@@ -1,0 +1,16 @@
+<%= semantic_form_for @delivery_service do |f| %>
+  <% if @delivery_service.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@delivery_service.errors.count, "error") %> prohibited this delivery_service from being saved:</h2>
+
+      <ul>
+      <% @delivery_service.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.inputs %>
+    <%= f.actions %>
+<% end %>

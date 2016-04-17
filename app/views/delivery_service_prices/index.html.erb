@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Delivery Service Prices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @delivery_service_prices.each do |delivery_service_price| %>
+      <tr>
+        <td><%= link_to 'Show', delivery_service_price %></td>
+        <td><%= link_to 'Edit', edit_delivery_service_price_path(delivery_service_price) %></td>
+        <td><%= link_to 'Destroy', delivery_service_price, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Delivery service price', new_delivery_service_price_path %>

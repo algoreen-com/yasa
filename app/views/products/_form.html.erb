@@ -10,8 +10,25 @@
       </ul>
     </div>
   <% end %>
-
-    <%= f.inputs %>
+    <%= f.label :name, 'Name' %>
+    <%= f.text_field :name %>
+    <%= f.label :price, 'Price' %>
+    <%= f.text_field :price %>
+    <%= f.label :cost_price, 'Cost Price' %>
+    <%= f.text_field :cost_price %>
+    <%= f.label :sku, 'SKU' %>
+    <%= f.text_field :sku %>
+    <%= f.label :description, 'Description' %>
+    <%= f.text_field :description %>  
+    <%= f.label :short_description, 'Short Description' %>
+    <%= f.text_field :short_description %>
+    <%= f.label :weight, 'Wight' %>
+    <%= f.text_field :weight %>
+    <%= f.label :active, 'Active'%> 
+    <%= f.check_box :active %>
+    <%= f.label :image, 'Image' %>
     <%= f.file_field :image %>
-    <%= f.actions %>
+    <%= f.submit 'Save'%>
+
 <% end %>
+

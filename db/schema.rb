@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160416092909) do
+ActiveRecord::Schema.define(version: 20160417051457) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer  "customer_id"
@@ -28,6 +28,13 @@ ActiveRecord::Schema.define(version: 20160416092909) do
     t.integer  "country_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "parent_id",  default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "countries", force: :cascade do |t|
@@ -202,6 +209,13 @@ ActiveRecord::Schema.define(version: 20160416092909) do
     t.boolean  "default",                                   default: false
     t.datetime "created_at",                                                null: false
     t.datetime "updated_at",                                                null: false
+  end
+
+  create_table "products_categories", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "stock_level_adjustments", force: :cascade do |t|

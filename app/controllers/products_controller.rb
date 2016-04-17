@@ -7,6 +7,11 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def home
+    @categories = Category.all
+    @products = Product.all
+  end
+
   # GET /products/1
   # GET /products/1.json
   def show
@@ -69,6 +74,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.fetch(:product, {})
+      params.require(:product).permit!
     end
 end

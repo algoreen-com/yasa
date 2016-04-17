@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160417051457) do
+ActiveRecord::Schema.define(version: 20160417110826) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer  "customer_id"
@@ -195,20 +195,24 @@ ActiveRecord::Schema.define(version: 20160417051457) do
     t.string   "permalink"
     t.text     "description"
     t.text     "short_description"
-    t.boolean  "active",                                    default: true
-    t.decimal  "weight",            precision: 8, scale: 3, default: 0.0
-    t.decimal  "width",             precision: 6, scale: 2, default: 0.0
-    t.decimal  "langth",            precision: 6, scale: 2, default: 0.0
-    t.decimal  "height",            precision: 6, scale: 2, default: 0.0
-    t.decimal  "price",             precision: 8, scale: 2, default: 0.0
-    t.decimal  "cost_price",        precision: 8, scale: 2, default: 0.0
+    t.boolean  "active",                                     default: true
+    t.decimal  "weight",             precision: 8, scale: 3, default: 0.0
+    t.decimal  "width",              precision: 6, scale: 2, default: 0.0
+    t.decimal  "langth",             precision: 6, scale: 2, default: 0.0
+    t.decimal  "height",             precision: 6, scale: 2, default: 0.0
+    t.decimal  "price",              precision: 8, scale: 2, default: 0.0
+    t.decimal  "cost_price",         precision: 8, scale: 2, default: 0.0
     t.integer  "tax_rate_id"
-    t.boolean  "featured",                                  default: false
+    t.boolean  "featured",                                   default: false
     t.text     "in_the_box"
-    t.boolean  "stock_control",                             default: true
-    t.boolean  "default",                                   default: false
-    t.datetime "created_at",                                                null: false
-    t.datetime "updated_at",                                                null: false
+    t.boolean  "stock_control",                              default: true
+    t.boolean  "default",                                    default: false
+    t.datetime "created_at",                                                 null: false
+    t.datetime "updated_at",                                                 null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "products_categories", force: :cascade do |t|

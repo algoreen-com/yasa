@@ -13,10 +13,10 @@ YASA stands for Yet Another Shopping App.
 
 ## The Motivation
 
-While there are many website for e-commerce, there is lost linke between fashion
-production process and e-commerce. YASA will try to fill such a gap and 
+While there are many websites for e-commerce, there is a lost link between fashion
+production process and e-commerce. YASA will try to fill such a gap. 
 
-We also working on better user experience for online shopper to make the process 
+We also working on a better user experience for online shopper to make the process 
 more pleasant and closer to physical shopping.
 
 
